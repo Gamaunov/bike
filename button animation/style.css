@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: rgb(5, 5, 4);
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.button {
+    padding: 20px 40px;
+    background-color: rgb(70, 65, 0);
+    font-size: 24px;
+    text-transform: uppercase;
+    user-select: none;
+    box-shadow: 0 0 2px white;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+.button::before,
+.button::after {
+    --size: 600px;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    width: var(--size);
+    height: var(--size);
+    transform: translate(-50%, 0);
+    background: linear-gradient(45deg,
+    rgba(95, 8, 51, 0.555),
+    rgba(31, 177, 187, 0.548)
+    );
+    box-shadow: inset 0 0 6vw rgb(0, 0, 0, 0.8);
+    border-radius: 40%;
+    transition: all .6s;
+}
+.button::after {
+    background: linear-gradient(45deg,
+    rgba(16, 33, 184, 0.514),
+    rgba(158, 52, 9, 0.548)
+    );
+    animation: rotate 12s linear infinite;
+    left: 40%;
+    bottom: 75%;
+}
+.button::before {
+    animation: rotate 7s linear infinite;
+    left: 50%;
+    bottom: 50%;
+}
+.button span {
+    color: aliceblue;
+    letter-spacing: 0.3em;
+    position: relative;
+    z-index: 1;
+    opacity: 0.9;
+    transition: all 0.3s;
+    text-shadow: 0 2px 3px #000;
+}
+.button:hover span {
+    opacity: 100;
+}
+.button:active span {
+    color: rgb(223, 241, 235);
+}
+.button:hover::before,
+.button:hover::after {
+    bottom: 150%;
+}
+.button .shadow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 500px;
+    transform: translateY(-50%);
+    box-shadow: inset 0 0 3vw rgb(0, 0, 0, 0.7);
+}
+@keyframes rotate {
+    from {
+        transform: translate(-50%, 0) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, 0) rotate(360deg);
+    }
+}
