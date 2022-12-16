@@ -1,0 +1,59 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  background-color: beige;
+}
+h1 {
+  letter-spacing: 3px;
+}
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 650px;
+  gap: 2px;
+}
+
+.card {
+  width: 200px;
+}
+
+.card-image {
+  display: block;
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: rgb(238, 222, 4);
+  background: #329452;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #2d613e;
+}
+
+.input {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+  width: 210px;
+  padding: 7px;
+  outline: none;
+  margin-bottom: 15px;
+}
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+	display: none;
+}
+.input::placeholder {
+  color: #329452;
+}
