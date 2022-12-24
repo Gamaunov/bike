@@ -215,21 +215,6 @@ function initSlider2() {
     }
     slider();
   });
-
-  function initAutoplay2() {
-    setInterval(() => {
-      if (current++ == image.length) {
-        current = 0;
-      } else {
-        image[current].classList.remove("opacity0");
-        current++;
-      }
-      slider();
-    }, 3000);
-  }
-
-  initAutoplay2();
-
 }
 document.addEventListener("DOMContentLoaded", function () {
   initSlider2();
