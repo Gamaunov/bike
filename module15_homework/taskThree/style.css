@@ -1,0 +1,154 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+@font-face {
+  font-family: "Tinos", serif;
+  src: local("Tinos"), url(./fonts/Tinos-Regular.woff2) format("woff2"),
+    url(./fonts/Tinos-Regular.woff) format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: rgb(2, 1, 1);
+}
+svg {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: rgb(20, 19, 19);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 30px;
+  position: relative;
+  margin: 100px 0;
+  margin: 100px 0 20px 0;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 15px;
+  padding: 5px 10px;
+  background-color: gold;
+  border-radius: 15px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-family: "Tinos", serif;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  color: green;
+  background-color: rgb(241, 234, 234);
+}
+.btn:active {
+  opacity: 0.5;
+}
+.btn__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.input {
+  outline: none;
+  border: none;
+  width: 400px;
+  border-radius: 15px;
+  font-size: 24px;
+  padding: 5px 10px;
+}
+.input::placeholder {
+  color: rgb(146, 194, 178);
+  font-size: 16px;
+}
+.info__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info-output {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.chat-output {
+  height: 200px;
+  min-width: 600px;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  background-color: rgb(17, 97, 84);
+  font-family: "Tinos", serif;
+  font-size: 24px;
+}
+.chat_output > div {
+  max-width: 80%;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 3px;
+  color: rgb(190, 30, 30);
+  bottom: -10px;
+}
+.recieved {
+  background: #abce0d;
+  color: #020c02;
+  border-radius: 15px;
+  padding: 15px;
+  align-self: flex-start;
+  margin: 5px;
+}
+.sent {
+  background: #02bfe0;
+  color: #020c02;
+  border-radius: 15px;
+  padding: 15px;
+  align-self: flex-end;
+  margin: 5px;
+}
+.svg-connect {
+  width: 20px;
+  height: 20px;
+}
+.svg-geolocation {
+  width: 30px;
+  height: 30px;
+  color: #000000;
+  background-color: #fbff00;
+  border-radius: 50%;
+
+  animation-name: geolocation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in;
+}
+@keyframes geolocation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
